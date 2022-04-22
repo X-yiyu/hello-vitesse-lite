@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{ name: string }>()
 const router = useRouter()
+console.log(props);
 </script>
 
 <template>

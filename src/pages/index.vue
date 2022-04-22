@@ -6,6 +6,9 @@ const go = () => {
   if (name)
     router.push(`/hi/${encodeURIComponent(name)}`)
 }
+const goA = () => {
+    router.push('/a')
+}
 </script>
 
 <template>
@@ -32,7 +35,7 @@ const go = () => {
       w="250px"
       text="center"
       bg="transparent"
-      border="~ rounded gray-200 dark:gray-700"
+      border="~ rounded gray-400 dark:gray-700"
       outline="none active:none"
       @keydown.enter="go"
     >
@@ -41,9 +44,18 @@ const go = () => {
       <button
         class="m-3 text-sm btn"
         :disabled="!name"
+        cursor-not-allowed
         @click="go"
       >
         Go
+      </button>
+    </div>
+    <div>
+      <button
+        class="m-3 text-sm btn"
+        @click="goA"
+      >
+        Go-A
       </button>
     </div>
   </div>
